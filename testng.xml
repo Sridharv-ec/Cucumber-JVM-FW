@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CustomSuite" parallel="instances" verbose="1" configfailurepolicy="continue" thread-count="4">
+    <listeners>
+        <listener class-name="com.kuoni.automation.util.TestNGExecutionListener"></listener>
+    </listeners>
+    <test name="Test1" annotations="JDK" preserve-order="true">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.kuoni.automation.testrunner.CucumberTestngRunner"/>
+            <class name="com.kuoni.automation.testrunner.HotelPLPCucumberRunner"/>
+            <class name="com.kuoni.automation.testrunner.HotelBookingCucumberRunner"/>
+            <class name="com.kuoni.automation.testrunner.TravelerItineraryRunner"/>
+        </classes>
+    </test>
+   <!-- <test name="Test2" annotations="JDK" preserve-order="true">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.kuoni.automation.testrunner.HotelPLPCucumberRunner"/>
+        </classes>
+    </test>
+    <test name="Test3" annotations="JDK" preserve-order="true">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.kuoni.automation.testrunner.HotelBookingCucumberRunner"/>
+        </classes>
+    </test>
+    <test name="Test4" annotations="JDK" preserve-order="true">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.kuoni.automation.testrunner.TravelerItineraryRunner"/>
+        </classes>
+    </test>-->
+</suite>
